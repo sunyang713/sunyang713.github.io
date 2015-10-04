@@ -21,9 +21,9 @@ var RandomQuote = React.createClass({
     var quote = dat["text"];
     var speaker = dat["speaker"];
     return (
-      <div className="quote-block">
-        <h1 className="cover-heading">{ quote }</h1>
-        <p className="lead"> - { speaker }</p>
+      <div className="quote-block cover-text">
+        <h1>{ quote }</h1>
+        <p className="speaker"> - { speaker }</p>
       </div>
     );
   }
