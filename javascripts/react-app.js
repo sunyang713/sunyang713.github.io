@@ -14,7 +14,7 @@ var quotes =
 var RandomQuote = React.createClass({
   render: function() {
     var thing = this.props.toggler;
-    var max = quotes.length;
+    var max = quotes.length-1;
     var min = 0;
     var randNum = Math.floor(Math.random() * (max - min + 1)) + min;
     var dat = quotes[randNum];

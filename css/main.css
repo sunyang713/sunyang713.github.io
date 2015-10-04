@@ -6,7 +6,7 @@ p, div {
 }
 
 
-.site-wrapper:before {
+/*.site-wrapper:before {
   content: "";
   position: fixed;
   left: 0;
@@ -14,10 +14,11 @@ p, div {
   z-index: -1;
   
   display: block;
-  background-image: url("../images/eiffel-tower.jpg");
   background-size: cover;
   width: 105%;
   height: 105%;
+
+  filter: greyscale(.5);
 
 /*  linear-gradient: rgba(0.,0,0,0.7) rgba(0,0,0,0.7);
 */
@@ -26,11 +27,11 @@ p, div {
   -o-filter: blur(5px);
   -ms-filter: blur(5px);
   filter: blur(5px);
-*/}
+*/}*/
 
 
 .cover-heading {
-  text-shadow: 1px 1px 0px black; 
+  text-shadow: 1px 1px 0px black;
 }
 
 .section-padding {
@@ -46,7 +47,7 @@ p, div {
 }
 
 .cover-block {
-  margin: 24% auto;
+  margin: 25% auto;
 }
 
 .quote-block {
