@@ -18,7 +18,7 @@
     <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" -->
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" -->
 
     <!-- Google Fonts: Quicksand -->
     <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
@@ -55,26 +55,55 @@
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a onClick="$('#contact').scrollView()">Contact</a></li>
                 </ul>
               </nav>
             </div>
           </div>
+      
+        </div>
+      
 
-          <div class="inner cover">
-            <h1 class="cover-heading">Jonathan Sun</h1>
-            <p class="lead">"Let's dance like crazy potatoes on difficult days - Andre"</p>
-            <p class="lead">
-              <a href="resources/resume.pdf" class="btn btn-lg btn-primary">Resume</a>
-            </p>
-          </div>
 
-          <div class="mastfoot">
-            <div class="inner">
-              <p><a href="https://www.linkedin.com/in/jonathansun0">LinkedIn</a> <a href="https://github.com/sunyang713">Github</a></p>
+        <div class="cover-block">
+          <div class="cover-container">
+            <div class="inner cover">
+              <h1 class="cover-heading">"Let's dance like crazy potatoes on difficult days"</h1>
+              <p class="lead"> - Andre</p>
+              <p class="lead">
+                <a href="resources/resume.pdf" class="btn btn-lg btn-primary">Resume</a>
+              </p>
             </div>
           </div>
+        </div>
 
+
+        <div id="react-app"></div>
+        <div id="react-app-timer">
+          <p>If you can see this, React is not working right.</p>
+        </div>
+
+
+
+        <div id="contact" class="solid-background add-height">
+          <div class="cover-container">
+            <div class="inner cover">
+              <h1 class="cover-heading">Contact</h1>
+              <p class="lead">here is how to contact me:</p>
+              <p class="lead">
+                <div class="contact-card">
+
+                </div>
+              </p>
+            </div>
+
+            <div class="mastfoot">
+              <div class="inner">
+                <p><a href="https://www.linkedin.com/in/jonathansun0">LinkedIn</a> <a href="https://github.com/sunyang713">Github</a></p>
+              </div>
+            </div>
+
+          </div>
         </div>
 
       </div>
@@ -88,5 +117,22 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="javascripts/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- Primary script -->
+    <script src="javascripts/main.js"></script>
+
+    <!-- RequireJS -->
+    <!-- script src="javascripts/require.min.js"></script -->
+
+    <!-- React dev -->
+    <script src="https://fb.me/react-0.13.3.js"></script>
+
+    <!-- React production -->
+    <!-- script src="https://fb.me/react-0.13.3.min.js"></script -->
+
+    <script src="javascripts/JSXTransformer.js"></script>
+
+    <script type="text/jsx" src="javascripts/react-app.js"></script>
+
   </body>
 </html>
