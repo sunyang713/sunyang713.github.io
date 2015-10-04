@@ -5,15 +5,29 @@ p, div {
   font-family: 'Quicksand', sans-serif;
 }
 
-.eiffel-tower {
+
+.site-wrapper:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  
+  display: block;
   background-image: url("../images/eiffel-tower.jpg");
-  background-attachment: fixed;
   background-size: cover;
-/*  background: radial-gradient(black, rgba(255,255,255,0), url("../images/eiffel-tower.jpg"));
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url("../images/eiffel-tower.jpg") no-repeat;
-    background-size: cover;
-    */
-}
+  width: 105%;
+  height: 105%;
+
+/*  linear-gradient: rgba(0.,0,0,0.7) rgba(0,0,0,0.7);
+*/
+/*  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+*/}
+
 
 .cover-heading {
   text-shadow: 1px 1px 0px black; 
@@ -32,8 +46,7 @@ p, div {
 }
 
 .cover-block {
-  min-height: 100%;
-  margin: 23% auto;
+  margin: 24% auto;
 }
 
 .quote-block {
@@ -41,7 +54,7 @@ p, div {
 }
 
 .quote-toggle {
-  /*background: rgba(102, 127, 153, .9);*/
+  background: rgba(102, 127, 153, .1);
   height: 40px;
   width: 100px;
   margin: 0 auto;
@@ -50,6 +63,10 @@ p, div {
 .quote-toggle:hover {
   background: rgba(102, 127, 153, .5);
   cursor: pointer;
+}
+
+.quote-toggle:active {
+  background: rgba(102, 127, 153, .2);
 }
 
 
