@@ -1,33 +1,59 @@
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Quicksand',sans-serif;
+  font-family: 'Quicksand',sans-serif;
 }
 p, div {
-	font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .eiffel-tower {
-	background-image: url("../images/eiffel-tower.jpg");
-	background-attachment: fixed;
-	background-size: cover;
-/*	background: radial-gradient(black, rgba(255,255,255,0), url("../images/eiffel-tower.jpg"));
+  background-image: url("../images/eiffel-tower.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+/*  background: radial-gradient(black, rgba(255,255,255,0), url("../images/eiffel-tower.jpg"));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url("../images/eiffel-tower.jpg") no-repeat;
-	background-size: cover;
-*/
+    background-size: cover;
+    */
 }
 
 .cover-heading {
-	text-shadow: 1px 1px 0px black; 
+  text-shadow: 1px 1px 0px black; 
+}
+
+.section-padding {
+  padding: 100px 0px;
 }
 
 .solid-background {
-	background-color: blue;
+  background: rgba(102, 127, 153, .9);
 }
 
 .add-height {
-	height: 800px;
+  height: 200px;
 }
 
 .cover-block {
-	min-height: 100%;
-	margin: 23% auto;
+  min-height: 100%;
+  margin: 23% auto;
+}
+
+.quote-block {
+  height: 200px;
+}
+
+.quote-toggle {
+  /*background: rgba(102, 127, 153, .9);*/
+  height: 40px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.quote-toggle:hover {
+  background: rgba(102, 127, 153, .5);
+  cursor: pointer;
+}
+
+
+.contact-card {
+  text-align: left;
+  padding: 0px 100px;
 }

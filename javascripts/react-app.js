@@ -2,18 +2,29 @@
 
 
 
-
+var quotes =
+[{"text": "Confused? Excellent. Keep calm and carry on.", "speaker": "Sworcery"},
+ {"text": "Take up the challenge", "speaker": "Z"},
+ {"text": "You're cute. I'm cute. We should go out.", "speaker": "Z"},
+ {"text": "Can we not?", "speaker": "Z"},
+ {"text": "My dad gave me some advice before he died. He said, son, if you see a beautiful woman, you have to flirt with her. It's rude not to.", "speaker": "Lowell"},
+ {"text": "Let's dance like crazy potatoes on difficult days", "speaker": "Andre"}];
 
 
 var RandomQuote = React.createClass({
   render: function() {
     var thing = this.props.toggler;
-    var max = 10;
+    var max = quotes.length;
     var min = 0;
     var randNum = Math.floor(Math.random() * (max - min + 1)) + min;
-    console.log(randNum);
+    var dat = quotes[randNum];
+    var quote = dat["text"];
+    var speaker = dat["speaker"];
     return (
-      <p> hello </p>
+      <div className="quote-block">
+        <h1 className="cover-heading">{ quote }</h1>
+        <p className="lead"> - { speaker }</p>
+      </div>
     );
   }
 });
@@ -35,17 +46,21 @@ var QuoteBlock = React.createClass({
 
   render: function() {
     return (
-      <div id="quote-block">
-        <div className="quote-text">
-          <RandomQuote toggler={this.state.thing} />
-        </div>
-        <div className="quote-toggle-button">
-          <a onClick={this.toggle}>Click to Toggle</a>
+      <div className="cover-block">
+        <div className="cover-container">
+          <div className="inner cover">
+            <RandomQuote toggler={this.state.thing} />
+            <div className="quote-toggle" onClick={this.toggle}>
+              <p></p>
+            </div>
+          </div>
         </div>
       </div>
     );
   }
 });
+
+
 
 
 var Shit = React.createClass({
@@ -103,5 +118,7 @@ setInterval(function() {
     document.getElementById('react-app-timer')
   );
 }, 50);
+
+
 
 
