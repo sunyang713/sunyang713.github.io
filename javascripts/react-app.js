@@ -45,9 +45,9 @@ var QuoteBlock = React.createClass({
         <div className="cover-container">
           <div className="inner cover">
             <RandomQuote toggler={this.state.thing} />
-            <!--div className="quote-toggle" onClick={this.toggle}>
+            <div className="quote-toggle" onClick={this.toggle}>
               <p></p>
-            </div-->
+            </div>
           </div>
         </div>
       </div>
