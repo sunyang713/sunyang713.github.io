@@ -70,6 +70,7 @@ p, div {
 .quote-toggle:hover {
   background: rgba(102, 127, 153, .5);
   cursor: pointer;
+  content: '';
 }
 
 .quote-toggle:active {
@@ -81,3 +82,5 @@ p, div {
   text-align: left;
   padding: 0px 100px;
 }
+
+

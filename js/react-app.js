@@ -3,22 +3,25 @@
 
 
 var quotes =
-[{"text": "Let's dance like crazy potatoes on difficult days", "speaker": "Andre"}];
-
+[{"text": "Take up the challenge", "speaker": "Z"},
+ {"text": "You're cute. I'm cute. We should go out.", "speaker": "Z"},
+ {"text": "Can we not?", "speaker": "Z"},
+ {"text": "Let's dance like crazy potatoes on difficult days", "speaker": "Andre"}];
 
 var RandomQuote = React.createClass({
+
   render: function() {
     var thing = this.props.toggler;
     var max = quotes.length-1;
     var min = 0;
     var randNum = Math.floor(Math.random() * (max - min + 1)) + min;
+
     var dat = quotes[randNum];
     var quote = dat["text"];
     var speaker = dat["speaker"];
     return (
       <div className="quote-block cover-text">
         <h1>{ quote }</h1>
-        <p className="speaker"> - { speaker }</p>
       </div>
     );
   }
@@ -46,7 +49,7 @@ var QuoteBlock = React.createClass({
           <div className="inner cover">
             <RandomQuote toggler={this.state.thing} />
             <div className="quote-toggle" onClick={this.toggle}>
-              <p></p>
+              <div className="center"></div>
             </div>
           </div>
         </div>
