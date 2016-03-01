@@ -18,5 +18,5 @@ class CounterContainer extends React.Component {
 export default reduxify({
   container: CounterContainer,
   selector: 'counter',
-  actions: { counter }
+  actions: { counterActions }
 })

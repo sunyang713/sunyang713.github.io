@@ -35,3 +35,7 @@ node_modules
 # Cancer
 .DS_Store
 
+# Build
+dist
+.publish
+
