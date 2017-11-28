@@ -1,17 +1,9 @@
-import { createElement } from 'react'
-import { render } from 'react-dom'
+import Vue from 'vue'
+import App from 'App'
+import router from 'router'
 
-import ROOT from 'containers/Root'
-
-if (__DEV__) {
-  try {
-    render(ROOT, document.getElementById('root'))
-  } catch (error) {
-    render(
-      createElement(require('redbox-react'), { error }),
-      document.getElementById('root')
-    )
-  }
-} else {
-  render(ROOT, document.getElementById('root'))
-}
+new Vue({
+  el: '#root',
+  router,
+  render: h => h(App)
+})

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<!-- Basic Page Needs
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<meta charset="utf-8">
+		<title>Jonathan Sun</title>
+		<meta name="description" content="Jonathan Sun's personal website.">
+		<meta name="author" content="Jonathan Sun">
+
+		<!-- Mobile Specific Metas
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Normalize.css
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" crossorigin="anonymous" />
+
+		<!-- Bulma
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css" integrity="sha256-n+Ch7oRdzZ9+8/inp+1mK/0Bt4T/2PSmo4L6YGoDiVM=" crossorigin="anonymous" />
+
+		<!-- Font Awesome
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+
+		<!-- Custom CSS
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<% for (var css of htmlWebpackPlugin.files.css) { %>
+		<link rel="stylesheet" href="<%= css %>.gz">
+		<% } %>
+
+	</head>
+	<body>
+
+		<!-- Application mount node
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<div id="root" style="height: 100vh; display: flex; align-items: center;">
+			<div style="width: 100%; text-align: center;">
+				<i class="fa fa-spinner fa-spin fa-5x fa-fw"></i>
+			</div>
+		</div>
+
+		<!-- Runtime Manifest
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<%= htmlWebpackPlugin.files.webpackRuntimeManifest %>
+
+		<!-- Chunk Manifest
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<%= htmlWebpackPlugin.files.webpackChunkManifest %>
+
+		<!-- Application scripts
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+		<script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>.gz"></script>
+		<% } %>
+
+	</body>
+</html>

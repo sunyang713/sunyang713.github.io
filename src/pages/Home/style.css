@@ -1,0 +1,173 @@
+/* WHOLE PAGE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#home-page .section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+
+/* HERO
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.hero {
+  position: relative;
+}
+
+.hero .hero-img {
+  object-fit: cover;
+  object-position: 50% 0%;
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  max-height: 600px;
+}
+
+.hero .logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4rem;
+  margin: auto;
+  width: 60rem;
+  max-width: 100%;
+  filter: drop-shadow(16px 16px 10px black)
+}
+
+
+/* BLURB
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.blurb {
+  padding: 1rem;
+}
+
+.blurb .container {
+  max-width: 50rem;
+}
+
+@media (min-width: 768px) {
+  .blurb .lead {
+    font-size: 1.7rem;
+  }
+}
+
+
+/* DANCE STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.dance-styles {
+  /* nice pink */
+  background-color: rgb(241,99,125);
+}
+
+.dance-styles a {
+  /* shade of nice pink */
+  color: rgb(113,47,59);
+}
+
+/* 'css-sprites' generated with online tool */
+.sprite {
+  background-image: url('./images/dance-sprites.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-right: 1rem;
+}
+.sprite-afro-cuban {
+  width: 22px;
+  height: 35px;
+  background-position: -5px -5px;
+}
+.sprite-bachata {
+  width: 27px;
+  height: 35px;
+  background-position: -37px -5px;
+}
+.sprite-dancehall {
+  width: 24px;
+  height: 35px;
+  background-position: -5px -50px;
+}
+.sprite-merengue {
+  width: 19px;
+  height: 35px;
+  background-position: -39px -50px;
+}
+.sprite-more {
+  width: 35px;
+  height: 35px;
+  background-position: -74px -5px;
+}
+.sprite-salsa {
+  width: 21px;
+  height: 35px;
+  background-position: -68px -50px;
+}
+
+
+/* LATEST EVENT
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.event {
+  background-image: url('./images/latest-event-background.jpg');
+  background-size: cover;
+}
+
+.event .container {
+  max-width: 50rem;
+}
+
+/*
+ * see https://github.com/twbs/bootstrap/issues/21256
+ */
+.event .card-img-overlay-wrapper {
+  position: relative;
+}
+
+/*
+ * have the image fill, not stretch
+ * make the image slightly transparent so overlay text is more legible
+ */
+.event .card-img-top {
+  object-fit: cover;
+  width: 100%;
+  height: 20rem;
+  filter: opacity(20%);
+}
+
+.event .card-title {
+  position: absolute;
+  bottom: 0;
+}
+
+/*@media (min-width: 768px) {
+  .event .card-img-overlay, .event .card-block {
+    width: 50rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}*/
+
+
+/* LATEST POSTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.posts .card-img-top {
+  width: 100%;
+}
+
+
+/* NEWSLETTER SUBSCRIPTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 768px) {
+  .newsletter-subscription .container {
+    max-width: 50rem;
+  }
+
+  .newsletter-subscription .card-block {
+    width: 40rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

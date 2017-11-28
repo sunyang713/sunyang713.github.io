@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<!-- Basic Page Needs
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<meta charset="utf-8">
+		<title>sunyang713.github.io</title>
+		<meta name="description" content="site dev">
+		<meta name="author" content="dev">
+
+		<!-- Mobile Specific Metas
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Normalize.css
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" integrity="sha256-sxzrkOPuwljiVGWbxViPJ14ZewXLJHFJDn0bv+5hsDY=" crossorigin="anonymous" />
+
+		<!-- Bulma
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.css" integrity="sha256-PELQzdZwUQw2WSX3q4QLMSzDqQyWrmrXODp2bZy6JOU=" crossorigin="anonymous" />
+
+		<!-- Font Awesome
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w=" crossorigin="anonymous" />
+
+		<!-- Custom CSS
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<% for (var css of htmlWebpackPlugin.files.css) { %>
+		<link rel="stylesheet" href="<%= css %>">
+		<% } %>
+
+	</head>
+	<body>
+
+		<!-- Application mount node
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<div id="root">notworking</div>
+
+		<!-- Runtime Manifest
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<%= htmlWebpackPlugin.files.webpackRuntimeManifest %>
+
+		<!-- Chunk Manifest
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<%= htmlWebpackPlugin.files.webpackChunkManifest %>
+
+		<!-- Application scripts
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+		<script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+		<% } %>
+
+	</body>
+</html>
