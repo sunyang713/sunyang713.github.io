@@ -1,0 +1,1 @@
+export { configurePreloadedState } from './configurePreloadedState'

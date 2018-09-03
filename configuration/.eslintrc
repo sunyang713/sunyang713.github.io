@@ -1,0 +1,32 @@
+{
+	"extends": [
+		"eslint:recommended",
+		"plugin:import/recommended",
+		"plugin:promise/recommended",
+		"plugin:ava/recommended"
+	],
+	"plugins": [
+		"import",
+		"promise",
+		"vue",
+		"html",
+		"ava"
+	],
+	// "settings": {
+	//   "import/resolver": {
+	//     "webpack": {
+	//       "config": "compiler/webpack.config.base.js"
+	//     }
+	//   }
+	// },
+	"parserOptions": {
+		"ecmaVersion": 8,
+		"sourceType": "module"
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true,
+		"commonjs": true
+	}
+}

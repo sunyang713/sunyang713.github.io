@@ -1,10 +1,11 @@
-notifications:
-  email: false
-
 language: node_js
 
 node_js:
 - node
+
+addons:
+  ssh_known_hosts:
+  - $DEPLOY_HOST
 
 env:
   global:
@@ -21,13 +22,30 @@ before_script:
 - openssl aes-256-cbc -k $ENCRYPTION_KEY -in .npmrc.enc -out .npmrc -d
 
 script:
+- npm test
+- npm run lint
 - npm run build
+
+before_deploy:
+- ssh-keyscan -t $TRAVIS_SSH_KEY_TYPES -H $DEPLOY_HOST 2>&1 | tee -a $HOME/.ssh/known_hosts
+- openssl aes-256-cbc -k $ENCRYPTION_KEY -in deploy_key.enc -out deploy_key -d
+- eval "$(ssh-agent -s)"
+- chmod 400 deploy_key
+- ssh-add deploy_key
 
 deploy:
 - provider: pages
   local_dir: $BUILD_PATH
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+    condition:
+    - $ENV = production
+- provider: script
+  skip_cleanup: true
+  script:
+  - rsync -r --delete-after $BUILD_PATH/* $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
   on:
     branch: master
     condition:

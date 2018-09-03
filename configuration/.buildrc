@@ -1,0 +1,3 @@
+; Webpack build configuration.
+
+build_path=something

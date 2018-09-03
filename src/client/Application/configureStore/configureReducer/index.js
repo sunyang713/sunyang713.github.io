@@ -1,0 +1,1 @@
+export { configureReducer } from './configureReducer'

@@ -1,0 +1,12 @@
+maybe congregate all epics/sagas/synchronous workflows here?
+
+maybe this belongs in 'actions' too? no need to separate into a different folder?
+
+no I think having unitized actions vs higher-level ones is a good idea.
+
+
+
+but maybe there can still be some 'unit' actions taht are asyncrhonous
+
+
+nah so here are the 'side effects'. /react/ to an atomic action.

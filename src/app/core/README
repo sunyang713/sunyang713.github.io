@@ -1,0 +1,38 @@
+normally called 'store', but it's more b/c it does api stuff, graphql, workflows, compilcated business logic. /Engine/.
+
+not just state management.
+
+
+
+the more semantic your actions are, the looser your reducers are coupled to your actions
+
+
+bad:
+myAct(a, b, c, c,d adsf,a sdf, )
+
+reducer(action) {
+	return logic dependeing on all those params
+}
+
+good:
+
+myAct()
+
+reducer(action) { return self-defined logic based on just the action type}
+
+
+
+
+
+
+
+
+
+
+
+So I was struggling to try to write a reducer enhancer to support 'loading' and 'errored' states.
+But /Promises/. I think the solution is that the value of the state can be a promise that resolves to the state shape.
+
+Then in React componetn or selector or wherever, you can natively use whether the promise is resolved, pending, or thrown.
+
+in React, there's something sick called "suspense." can't wait for it.

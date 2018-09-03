@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="<%= locale %>">
+	<head>
+
+		<!-- Basic Page Needs
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<meta charset="utf-8">
+		<title><%= title %></title>
+		<meta name="description" content="<%= description %>">
+		<meta name="author" content="<%= author %>">
+
+		<!-- Mobile Specific Metas
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Custom CSS
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<% for (var stylesheet of files.stylesheets) { %>
+		<link rel="stylesheet" href="<%= stylesheet.src %>" integrity="<%= files.stylesheet.integrity %>" crossorigin="<%= crossOrigin %>" />
+		<% } %>
+
+	</head>
+	<body>
+		<!-- Application mount node
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<div id="root"></div>
+
+		<!-- Runtime Manifest
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<%= runtimeManifest %>
+
+		<!-- Chunk Manifest
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<%= chunkManifest %>
+
+		<!-- Application scripts config this
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<script>window.__PRELOADED_STATE__ = <%= preloadedState %></script>
+
+		<% for (var script of files.scripts) { %>
+		<script src="<%= script.src %>" integrity="<%= script.integrity %>" crossorigin="<%= crossOrigin %>"></script>
+		<% } %>
+
+	</body>
+</html>
